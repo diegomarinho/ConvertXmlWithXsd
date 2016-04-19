@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="base">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nfse">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="nf">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="valor_total" />
+										<xs:element type="xs:string" name="valor_desconto" />
+										<xs:element type="xs:string" name="valor_ir" />
+										<xs:element type="xs:string" name="valor_inss" />
+										<xs:element type="xs:string" name="valor_contribuicao_social" />
+										<xs:element type="xs:string" name="valor_rps" />
+										<xs:element type="xs:string" name="valor_pis" />
+										<xs:element type="xs:string" name="valor_cofins" />
+										<xs:element type="xs:string" name="observacao" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="prestador">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:long" name="cpfcnpj" />
+										<xs:element type="xs:short" name="cidade" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="tomador">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="tipo" />
+										<xs:element type="xs:long" name="cpfcnpj" />
+										<xs:element type="xs:string" name="ie" />
+										<xs:element type="xs:string" name="nome_razao_social" />
+										<xs:element type="xs:string" name="sobrenome_nome_fantasia" />
+										<xs:element type="xs:string" name="logradouro" />
+										<xs:element type="xs:string" name="email" />
+										<xs:element type="xs:string" name="complemento" />
+										<xs:element type="xs:string" name="ponto_referencia" />
+										<xs:element type="xs:string" name="bairro" />
+										<xs:element type="xs:short" name="cidade" />
+										<xs:element type="xs:int" name="cep" />
+										<xs:element type="xs:string" name="ddd_fone_comercial" />
+										<xs:element type="xs:string" name="fone_comercial" />
+										<xs:element type="xs:string" name="ddd_fone_residencial" />
+										<xs:element type="xs:string" name="fone_residencial" />
+										<xs:element type="xs:string" name="ddd_fax" />
+										<xs:element type="xs:string" name="fone_fax" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="itens">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="lista">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element type="xs:short"
+														name="codigo_local_prestacao_servico" />
+													<xs:element type="xs:short" name="codigo_item_lista_servico" />
+													<xs:element type="xs:string" name="descritivo" />
+													<xs:element type="xs:string" name="aliquota_item_lista_servico" />
+													<xs:element type="xs:byte" name="situacao_tributaria" />
+													<xs:element type="xs:byte" name="valor_tributavel" />
+													<xs:element type="xs:string" name="valor_deducao" />
+													<xs:element type="xs:string" name="valor_issrf" />
+													<xs:element type="xs:string" name="tributa_municipio_prestador" />
+													<xs:element type="xs:string" name="unidade_codigo" />
+													<xs:element type="xs:string" name="unidade_quantidade" />
+													<xs:element type="xs:string" name="unidade_valor_unitario" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element type="xs:string" name="produtos" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
